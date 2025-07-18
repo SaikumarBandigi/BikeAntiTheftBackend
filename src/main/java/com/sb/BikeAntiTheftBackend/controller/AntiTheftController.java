@@ -39,4 +39,11 @@ public class AntiTheftController {
         return ResponseEntity.ok("Alert email sent.");
     }
 
+    ///////////////////////////////////
+    @GetMapping("/env-check")
+    public String checkEnv() {
+        return "Username: " + System.getenv("MAIL_USERNAME");
+    }
+
+
 }
